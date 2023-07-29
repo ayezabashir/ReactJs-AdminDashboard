@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #111;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
