@@ -17,7 +17,8 @@
     "apexcharts": "^3.41.0",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sass": "^1.64.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

@@ -1,0 +1,44 @@
+// header
+.header {
+  width: 100vw;
+  height: 100%;
+  background: transparent;
+  height: 32px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    .left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        margin: 0 2px;
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+      .icon {
+        width: 100%;
+        height: 32px;
+      }
+    }
+    .right {
+      display: flex;
+      justify-content: space-between;
+      .icon {
+        margin: 0 10px;
+        height: 30px;
+      }
+      .admin {
+        cursor: pointer;
+        img {
+          border-radius: 50%;
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
+}

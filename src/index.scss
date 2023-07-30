@@ -7,6 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #ebeff2;
 }
 a {
   font-size: 20px;
@@ -16,4 +17,14 @@ a {
 a:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.container {
+  max-width: 95%;
+  margin: auto;
+}
+
+.icon {
+  cursor: pointer;
+  color: #757e85;
 }
