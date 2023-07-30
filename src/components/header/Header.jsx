@@ -1,4 +1,5 @@
 import logo from '../../assets/images/logo.png'
+import adminlogo from '../../assets/images/adminlogo.png'
 import admin from '../../assets/images/adminimg.png'
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
@@ -12,7 +13,12 @@ const Header = ({ mode, light }) => {
         <header className="header">
             <div className="container">
                 <div className="left">
-                    <h2>Dashboard</h2>
+                    <div className="admin">
+                        <div className="image">
+                            <img src={adminlogo} alt="" />
+                        </div>
+                        <h2>Dashboard</h2>
+                    </div>
                     <div className="display-mb">
                         <div className="logo">
                             <img src={logo} alt="logo" />

@@ -1,11 +1,13 @@
 $primary-color: #757e85;
 $body-bg: #ebeff2;
+$text-hover: #71b6f9;
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,25 +19,22 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p,
+small {
   color: $primary-color;
-}
-a {
-  font-size: 20px;
-  text-decoration: none;
-  color: $primary-color;
-}
-a:hover {
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 .container {
-  max-width: 95%;
+  max-width: 100%;
   margin: auto;
 }
 
 .icon {
   cursor: pointer;
   color: $primary-color;
+  &:hover {
+    color: $text-hover;
+    transition: all 0.3s ease;
+  }
 }
