@@ -1,3 +1,5 @@
+$primary-color: #757e85;
+$body-bg: #ebeff2;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,12 +9,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ebeff2;
+  background: $body-bg;
+  transition: all 0.5s ease-in;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary-color;
 }
 a {
   font-size: 20px;
   text-decoration: none;
-  color: #111;
+  color: $primary-color;
 }
 a:hover {
   text-decoration: underline;
@@ -26,5 +37,5 @@ a:hover {
 
 .icon {
   cursor: pointer;
-  color: #757e85;
+  color: $primary-color;
 }

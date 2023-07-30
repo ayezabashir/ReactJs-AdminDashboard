@@ -1,3 +1,6 @@
+$primary-color: #757e85;
+$bg-input: #e2e6ea;
+
 // header
 .header {
   width: 100vw;
@@ -9,34 +12,96 @@
     justify-content: space-between;
     padding: 10px 0;
     .left {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .logo {
-        margin: 0 2px;
-        img {
-          width: 32px;
-          height: 32px;
-        }
+      h2 {
+        font-size: 20px;
       }
-      .icon {
-        width: 100%;
-        height: 32px;
+      .display-mb {
+        display: none;
       }
     }
     .right {
       display: flex;
       justify-content: space-between;
       .icon {
-        margin: 0 10px;
+        margin: 0 12px;
         height: 30px;
+      }
+      .search {
+        display: flex;
+        position: relative;
+        input {
+          position: absolute;
+          right: 0%;
+          top: 0;
+          padding: 7px 15px;
+          background: $bg-input;
+          border: none;
+          border-radius: 30px;
+          outline: none;
+        }
+        .icon {
+          z-index: 11;
+        }
       }
       .admin {
         cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         img {
           border-radius: 50%;
-          height: 30px;
-          width: 30px;
+          height: 26px;
+          width: 26px;
+        }
+        h4 {
+          margin-left: 5px;
+        }
+        .icon {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    .container {
+      .left {
+        h2 {
+          display: none;
+        }
+        .display-mb {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .logo {
+            margin: 0 2px;
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+          .icon {
+            width: 100%;
+            height: 30px;
+          }
+        }
+      }
+      .right {
+        .search {
+          input {
+            display: none;
+          }
+          .icon {
+            margin: 0;
+          }
+        }
+        .admin {
+          h4,
+          .icon {
+            display: none;
+          }
         }
       }
     }
