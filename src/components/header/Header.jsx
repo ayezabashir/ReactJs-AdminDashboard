@@ -9,13 +9,19 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Sidebar from '../sidebar/Sidebar'
 import { useState } from 'react';
+import Notification from './Notification';
 // eslint-disable-next-line react/prop-types
 const Header = ({ mode, light }) => {
-    const [isShown, setIsShown] = useState(false);
+    const [isSidebarShown, setIsSidebarShown] = useState(false);
+    const [isNotifShown, setIsNotifShown] = useState(false);
 
-    const handleClick = () => {
-        setIsShown(current => !current);
+    const handleSidebarClick = () => {
+        setIsSidebarShown(current => !current);
     };
+
+    const handleNotifClick = () => {
+        setIsNotifShown(current => !current);
+    }
     return (
         <header className="header">
             <div className="container">
@@ -30,8 +36,8 @@ const Header = ({ mode, light }) => {
                         <div className="logo">
                             <img src={logo} alt="logo" />
                         </div>
-                        <MenuIcon className='icon' onClick={handleClick} />
-                        {isShown && <Sidebar />}
+                        <MenuIcon className='icon' onClick={handleSidebarClick} />
+                        {isSidebarShown && <Sidebar />}
                     </div>
                 </div>
                 <div className="right">
@@ -39,7 +45,10 @@ const Header = ({ mode, light }) => {
                         <input type="search" placeholder='Search...' id="searchInput" />
                         <SearchIcon className='icon' />
                     </div>
-                    <NotificationsNoneIcon className='icon' />
+                    <>
+                        <NotificationsNoneIcon className='icon notif' onClick={handleNotifClick} />
+                        {isNotifShown && <Notification />}
+                    </>
                     <div className="admin">
                         <img src={admin} alt="adminimg" />
                         <h4>Ayeza</h4>
