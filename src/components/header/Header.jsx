@@ -7,8 +7,15 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import Sidebar from '../sidebar/Sidebar'
+import { useState } from 'react';
 // eslint-disable-next-line react/prop-types
 const Header = ({ mode, light }) => {
+    const [isShown, setIsShown] = useState(false);
+
+    const handleClick = () => {
+        setIsShown(current => !current);
+    };
     return (
         <header className="header">
             <div className="container">
@@ -23,7 +30,8 @@ const Header = ({ mode, light }) => {
                         <div className="logo">
                             <img src={logo} alt="logo" />
                         </div>
-                        <MenuIcon className='icon' />
+                        <MenuIcon className='icon' onClick={handleClick} />
+                        {isShown && <Sidebar />}
                     </div>
                 </div>
                 <div className="right">
