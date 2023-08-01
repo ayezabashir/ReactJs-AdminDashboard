@@ -28,7 +28,7 @@ const Sidebar = () => {
                 <div className="content">
                     <div className="content-top">
                         <div className="image">
-                            <img src={admin} alt="" />
+                            <img src={admin} alt="" className='thumbnail' />
                         </div>
                         <h4>Ayeza Bashir</h4>
                         <small>Admin Head</small>
@@ -73,41 +73,57 @@ const Sidebar = () => {
                             </div>
                         </div>
                         <div className="title">
-                            <h5>Componets</h5>
+                            <h5>Custom</h5>
                             <div className="item">
                                 <PersonAddAlt1Icon className="icon" />
-                                <p>Base UI</p>
+                                <p>Auth Pages</p>
                             </div>
                             <div className="item">
                                 <NoteAddIcon className="icon" />
-                                <p>Widgets</p>
+                                <p>Extra Pages</p>
                             </div>
                             <div className="item">
                                 <ViewArrayIcon className="icon" />
-                                <p>Extended UI</p>
+                                <p>Laoyouts</p>
                             </div>
+
+                        </div>
+                        <div className="title">
+                            <h5>Componets</h5>
                             <div className="item">
                                 <WorkOutlineIcon className="icon" />
-                                <p>Icons</p>
+                                <p>Base UI</p>
                             </div>
                             <div className="item">
                                 <CardGiftcardIcon className="icon" />
-                                <p>Forms</p>
+                                <p>Widgets</p>
                             </div>
                             <div className="item">
                                 <AddBusinessIcon className="icon" />
-                                <p>Tables</p>
+                                <p>Extended UI</p>
                             </div>
                             <div className="item">
                                 <HealthAndSafetyIcon className="icon" />
-                                <p>Charts</p>
+                                <p>Icons</p>
                             </div>
                             <div className="item">
                                 <ForumIcon className="icon" />
-                                <p>Maps</p>
+                                <p>Forms</p>
                             </div>
                             <div className="item">
                                 <GridOnIcon className="icon" />
+                                <p>Tables</p>
+                            </div>
+                            <div className="item">
+                                <AddchartIcon className="icon" />
+                                <p>Charts</p>
+                            </div>
+                            <div className="item">
+                                <MapIcon className="icon" />
+                                <p>Maps</p>
+                            </div>
+                            <div className="item">
+                                <ShareIcon className="icon" />
                                 <p>Multi Level</p>
                             </div>
                         </div>

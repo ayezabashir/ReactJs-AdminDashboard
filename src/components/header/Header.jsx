@@ -17,7 +17,7 @@ const Header = ({ mode, light }) => {
                         <div className="image">
                             <img src={adminlogo} alt="" />
                         </div>
-                        <h2>Dashboard</h2>
+                        <h4>Dashboard</h4>
                     </div>
                     <div className="display-mb">
                         <div className="logo">

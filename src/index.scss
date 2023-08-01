@@ -1,13 +1,15 @@
-$primary-color: #757e85;
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600&display=swap");
+$primary-color: #343a40;
 $body-bg: #ebeff2;
 $text-hover: #71b6f9;
+$icon-color: #6c757d;
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Karla", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,10 +21,13 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p,
-small {
+h6 {
+  margin: 10px 0;
   color: $primary-color;
+}
+h4 {
+  font-weight: 600;
+  font-size: 1.125rem;
 }
 
 .container {
@@ -32,9 +37,14 @@ small {
 
 .icon {
   cursor: pointer;
-  color: $primary-color;
+  color: $icon-color;
+  font-weight: 400;
   &:hover {
     color: $text-hover;
     transition: all 0.3s ease;
   }
+}
+
+::placeholder {
+  font-family: "Karla", sans-serif;
 }
