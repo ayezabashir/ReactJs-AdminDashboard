@@ -44,61 +44,85 @@ $link-color: #6e768e;
         margin: 17px 20px;
         height: 30px;
       }
-      .notif {
+      .notif-content {
         position: relative;
-      }
-      .notification {
-        position: absolute;
-        top: 69px;
-        right: 181px;
-        width: 310px;
-        overflow-y: scroll;
-        height: 250px;
-        max-height: 250px;
-        background: #fff;
-        border-radius: 5px;
-        .notif-header {
-          padding: 5px 10px;
-          display: flex;
-          justify-content: space-between;
-          margin: 10px 0;
-          h5,
-          h6 {
-            display: inline-block;
-          }
+        .notif {
+          position: relative;
         }
-        .notif-body {
-          .inbox {
+        .span-notif {
+          position: absolute;
+          right: 14px;
+          top: 10px;
+          height: 18px;
+          width: 18px;
+          text-align: center;
+          border-radius: 100%;
+          background: red;
+          color: white;
+          font-size: 14px;
+        }
+        .notification {
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          width: 310px;
+          height: 250px;
+          min-height: 309px;
+          background: #fff;
+          border-radius: 5px;
+          .notif-header {
+            padding: 5px 10px;
             display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            margin-bottom: 5px;
-            padding-bottom: 10px;
-            img {
-              width: 30px;
-              height: 30px;
-              border-radius: 50%;
-              margin: 15px;
+            justify-content: space-between;
+            margin: 10px 0;
+            position: fixed;
+            width: inherit;
+            z-index: 1111;
+            background: white;
+
+            h5,
+            h6 {
+              display: inline-block;
             }
-            span {
-              padding: 5px;
+          }
+          .notif-body {
+            position: absolute;
+            top: 57px;
+            overflow-y: scroll;
+            height: inherit;
+            .inbox {
               display: flex;
-              flex-direction: column;
-              h5 {
-                margin-bottom: 0;
+              align-items: center;
+              justify-content: flex-start;
+              margin-bottom: 5px;
+              padding-bottom: 10px;
+              img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin: 15px;
               }
-              p {
-                color: $primary-color;
-                font-size: 14px;
+              span {
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+                h5 {
+                  margin-bottom: 0;
+                }
+                p {
+                  color: $primary-color;
+                  font-size: 14px;
+                }
               }
-            }
-            &:hover {
-              cursor: pointer;
-              background: #eaeaea;
+              &:hover {
+                cursor: pointer;
+                background: #eaeaea;
+              }
             }
           }
         }
       }
+
       .search {
         display: flex;
         position: relative;

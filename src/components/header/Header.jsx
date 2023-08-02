@@ -45,10 +45,11 @@ const Header = ({ mode, light }) => {
                         <input type="search" placeholder='Search...' id="searchInput" />
                         <SearchIcon className='icon' />
                     </div>
-                    <>
+                    <div className='notif-content'>
                         <NotificationsNoneIcon className='icon notif' onClick={handleNotifClick} />
+                        <span className='span-notif'>5</span>
                         {isNotifShown && <Notification />}
-                    </>
+                    </div>
                     <div className="admin">
                         <img src={admin} alt="adminimg" />
                         <h4>Ayeza</h4>
