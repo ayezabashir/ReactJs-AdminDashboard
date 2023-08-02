@@ -30,9 +30,17 @@ h4 {
   font-size: 1.125rem;
 }
 
+p {
+  font-family: "Karla", sans-serif;
+}
 .container {
   max-width: 100%;
   margin: auto;
+}
+
+ul li {
+  list-style: none;
+  list-style-type: none;
 }
 
 .icon {

@@ -10,10 +10,12 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Sidebar from '../sidebar/Sidebar'
 import { useState } from 'react';
 import Notification from './Notification';
+import Account from './Account';
 // eslint-disable-next-line react/prop-types
 const Header = ({ mode, light }) => {
     const [isSidebarShown, setIsSidebarShown] = useState(false);
     const [isNotifShown, setIsNotifShown] = useState(false);
+    const [accountDrop, setAccountDrop] = useState(false);
 
     const handleSidebarClick = () => {
         setIsSidebarShown(current => !current);
@@ -21,6 +23,10 @@ const Header = ({ mode, light }) => {
 
     const handleNotifClick = () => {
         setIsNotifShown(current => !current);
+    }
+
+    const handleAccount = () => {
+        setAccountDrop(current => !current);
     }
     return (
         <header className="header">
@@ -50,10 +56,11 @@ const Header = ({ mode, light }) => {
                         <span className='span-notif'>5</span>
                         {isNotifShown && <Notification />}
                     </div>
-                    <div className="admin">
+                    <div className="admin" onClick={handleAccount}>
                         <img src={admin} alt="adminimg" />
                         <h4>Ayeza</h4>
                         <KeyboardArrowDownIcon className='icon' />
+                        {accountDrop && <Account />}
                     </div>
                     <div onClick={mode}>
                         {light ? <DarkModeIcon className='icon' /> : <LightModeIcon className='icon' />}

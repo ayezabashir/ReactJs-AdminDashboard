@@ -41,7 +41,7 @@ $link-color: #6e768e;
       display: flex;
       justify-content: space-between;
       .icon {
-        margin: 17px 20px;
+        margin: 20px;
         height: 30px;
       }
       .notif-content {
@@ -149,6 +149,7 @@ $link-color: #6e768e;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
         img {
           border-radius: 50%;
           height: 26px;
@@ -160,6 +161,54 @@ $link-color: #6e768e;
         }
         .icon {
           margin: 0;
+        }
+        .account {
+          position: absolute;
+          top: 60px;
+          right: 5px;
+          width: 162px;
+          height: 156px;
+          background: #fff;
+          border-radius: 5px;
+          padding: 10px;
+          .account-header {
+            h5 {
+              font-size: 12px;
+            }
+          }
+          ul {
+            li {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              span {
+                .icon {
+                  margin: 0 2px;
+                }
+              }
+              p {
+                margin-left: 10px;
+                font-size: 14px;
+              }
+            }
+          }
+          button {
+            display: flex;
+            align-items: center;
+            outline: none;
+            background: transparent;
+            border: 0;
+            margin: 5px 0 10px 0;
+            span {
+              .icon {
+                margin: 0 2px;
+              }
+            }
+            p {
+              font-size: 14px;
+              margin-left: 10px;
+            }
+          }
         }
       }
     }
@@ -289,13 +338,40 @@ $link-color: #6e768e;
             display: none;
           }
           .icon {
-            margin: 18px -6px;
+            margin: 20px -6px;
+          }
+        }
+        .notif-content {
+          .notification {
+            width: 200px;
+            height: 238px;
+            .notif-body {
+              .inbox {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                img {
+                  width: 20px;
+                  height: 20px;
+                  margin: 8px;
+                }
+                span {
+                  p {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
           }
         }
         .admin {
           h4,
           .icon {
             display: none;
+          }
+          .account {
+            .icon {
+              display: inline;
+            }
           }
         }
       }
