@@ -35,5 +35,40 @@ export const notifPerson = [
         fullName: 'Vanessa Rob',
         message: "Congrats! I am glad you got promoted to CEO position"
     },
+]
 
+export const usercard = [
+    {
+        id: 1,
+        pic: user1,
+        fullName: 'Christina Paul',
+        email: "christina@gmail.com",
+        color: "#F9CB5B",
+        role: "Admin",
+    },
+    {
+        id: 2,
+        pic: user2,
+        fullName: 'Karen Rob',
+        email: "karenrob@gmail.com",
+        color: "#ef3ea1",
+        role: "Support Lead",
+
+    },
+    {
+        id: 3,
+        pic: user3,
+        fullName: 'Dean Thomas',
+        email: "dean@gmail.com",
+        color: "#18C66E",
+        role: "Designer",
+    },
+    {
+        id: 4,
+        pic: user4,
+        fullName: 'Ken Sean',
+        email: "christina@gmail.com",
+        color: "#3EBBE1",
+        role: "Developer",
+    }
 ]
