@@ -18,14 +18,20 @@ const Header = ({ mode, light }) => {
     const [accountDrop, setAccountDrop] = useState(false);
 
     const handleSidebarClick = () => {
+        setAccountDrop(false);
+        setIsNotifShown(false);
         setIsSidebarShown(current => !current);
     };
 
     const handleNotifClick = () => {
+        setAccountDrop(false);
+        setIsSidebarShown(false);
         setIsNotifShown(current => !current);
     }
 
     const handleAccount = () => {
+        setIsNotifShown(false);
+        setIsSidebarShown(false);
         setAccountDrop(current => !current);
     }
     return (

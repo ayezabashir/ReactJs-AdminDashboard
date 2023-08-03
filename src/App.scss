@@ -115,6 +115,7 @@ $link-color: #6e768e;
                 }
               }
               &:hover {
+                transition: all 0.3s ease;
                 cursor: pointer;
                 background: #eaeaea;
               }
@@ -167,17 +168,18 @@ $link-color: #6e768e;
           top: 60px;
           right: 5px;
           width: 162px;
-          height: 156px;
+          height: 180px;
           background: #fff;
           border-radius: 5px;
-          padding: 10px;
           .account-header {
+            padding: 5px 10px;
             h5 {
               font-size: 12px;
             }
           }
           ul {
             li {
+              padding: 5px 10px;
               display: flex;
               justify-content: flex-start;
               align-items: center;
@@ -190,6 +192,15 @@ $link-color: #6e768e;
                 margin-left: 10px;
                 font-size: 14px;
               }
+              &:hover {
+                transition: all 0.3s ease;
+                cursor: pointer;
+                background: #eaeaea;
+                .icon,
+                p {
+                  color: $text-hover;
+                }
+              }
             }
           }
           button {
@@ -198,7 +209,9 @@ $link-color: #6e768e;
             outline: none;
             background: transparent;
             border: 0;
-            margin: 5px 0 10px 0;
+            width: inherit;
+            padding: 5px 10px;
+            cursor: pointer;
             span {
               .icon {
                 margin: 0 2px;
@@ -207,6 +220,14 @@ $link-color: #6e768e;
             p {
               font-size: 14px;
               margin-left: 10px;
+            }
+            &:hover {
+              transition: all 0.3s ease;
+              background: #eaeaea;
+              .icon,
+              p {
+                color: $text-hover;
+              }
             }
           }
         }
@@ -226,7 +247,10 @@ $link-color: #6e768e;
   .content {
     padding: 30px 0;
     .content-top {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       .image {
         margin: 10px 0;
         img {
