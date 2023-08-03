@@ -351,6 +351,49 @@ $link-color: #6e768e;
   }
 }
 
+// Inbox
+.inbox {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  background: #fff;
+  cursor: pointer;
+  .inbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .inbox-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $border-color;
+    padding: 10px 20px;
+    .inbox-img {
+      margin-right: 10px;
+      img {
+        width: 40px;
+        border-radius: 50%;
+      }
+    }
+    .inbox-info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      span {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        small {
+          font-size: 10px;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     .container {

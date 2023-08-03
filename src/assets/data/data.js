@@ -8,32 +8,44 @@ export const notifPerson = [
     {
         id: 1,
         pic: user1,
+        textTime: '07:14',
         fullName: 'Christina Paul',
         message: 'Hi, How are you? What about our next Meeting'
     },
     {
         id: 2,
         pic: user2,
+        textTime: '21:00',
         fullName: 'Karen Rob',
         message: "Long time no see. Let's meet this friday"
     },
     {
         id: 3,
         pic: user3,
+        textTime: '16:04',
         fullName: 'Dean Thomas',
         message: 'Sorry, can not come at office today.'
     },
     {
         id: 4,
         pic: user4,
+        textTime: '12:50',
         fullName: 'Ken Sean',
         message: "Hi, How are you? Let's meet at brunch"
     },
     {
         id: 5,
         pic: user5,
+        textTime: '02:37',
         fullName: 'Vanessa Rob',
         message: "Congrats! I am glad you got promoted to CEO position"
+    },
+    {
+        id: 6,
+        pic: user3,
+        textTime: '11:03',
+        fullName: 'Harvy Kris',
+        message: "Did you check the mail the boss sent?"
     },
 ]
 
