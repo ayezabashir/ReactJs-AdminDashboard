@@ -65,7 +65,7 @@ $link-color: #6e768e;
           position: absolute;
           top: 60px;
           right: 20px;
-          width: 310px;
+          width: 330px;
           height: 250px;
           min-height: 309px;
           background: #fff;
@@ -92,6 +92,7 @@ $link-color: #6e768e;
             height: inherit;
             .inbox {
               display: flex;
+              flex-direction: row;
               align-items: center;
               justify-content: flex-start;
               margin-bottom: 5px;
@@ -394,6 +395,50 @@ $link-color: #6e768e;
   }
 }
 
+// Projects
+.projects {
+  margin: 20px;
+  border-radius: 5px;
+  background: #fff;
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    h5 {
+      font-weight: 600;
+      color: $primary-color;
+    }
+  }
+  .table {
+    padding: 10px;
+    overflow-x: auto;
+    table {
+      color: $primary-color;
+      width: 100%;
+      thead {
+        .t-header {
+          th {
+            font-size: 14px;
+            padding: 10px;
+            font-weight: 600;
+          }
+        }
+      }
+      tbody {
+        padding: 10px;
+        .t-body {
+          th {
+            font-size: 13px;
+            padding: 5px 10px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     .container {
@@ -454,6 +499,8 @@ $link-color: #6e768e;
             height: 238px;
             .notif-body {
               .inbox {
+                display: flex;
+                width: inherit;
                 margin-bottom: 0;
                 padding-bottom: 0;
                 img {

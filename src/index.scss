@@ -10,9 +10,6 @@ $icon-color: #6c757d;
 }
 body {
   font-family: "Karla", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: $body-bg;
   transition: all 0.5s ease-in;
 }
