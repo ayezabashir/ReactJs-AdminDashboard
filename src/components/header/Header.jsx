@@ -11,6 +11,7 @@ import Sidebar from '../sidebar/Sidebar'
 import { useState } from 'react';
 import Notification from './Notification';
 import Account from './Account';
+import { notifPerson } from '../../assets/data/data'
 // eslint-disable-next-line react/prop-types
 const Header = ({ mode, light }) => {
     const [isSidebarShown, setIsSidebarShown] = useState(false);
@@ -59,7 +60,7 @@ const Header = ({ mode, light }) => {
                     </div>
                     <div className='notif-content'>
                         <NotificationsNoneIcon className='icon notif' onClick={handleNotifClick} />
-                        <span className='span-notif'>5</span>
+                        <span className='span-notif'>{notifPerson.length}</span>
                         {isNotifShown && <Notification />}
                     </div>
                     <div className="admin" onClick={handleAccount}>
