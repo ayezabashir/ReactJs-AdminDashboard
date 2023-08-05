@@ -3,11 +3,14 @@ $bg-input: #e2e6ea;
 $text-hover: #71b6f9;
 $border-color: #dee2e6;
 $link-color: #6e768e;
+$body-bg: #ebeff2;
 
 // header
 .header {
   width: 100vw;
-  height: 100%;
+  position: fixed;
+  z-index: 111;
+  background: $body-bg;
   .container {
     display: flex;
     justify-content: space-between;
@@ -237,16 +240,159 @@ $link-color: #6e768e;
   }
 }
 
-// Sidebar
+// Main
+main {
+  position: absolute;
+  display: flex;
+  right: 0;
+  left: 0;
+  top: 72px;
+
+  .dashboard {
+    width: 75vw;
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    // Users
+    .users {
+      display: flex;
+      flex-wrap: wrap;
+      .user {
+        margin: 5px;
+        width: 250px;
+        background: #fff;
+        border-radius: 5px;
+        padding: 20px 10px;
+        display: flex;
+        align-items: center;
+        .user-img {
+          margin-right: 15px;
+          img {
+            width: 60px;
+            border-radius: 50%;
+          }
+        }
+        .user-info {
+          display: flex;
+          flex-direction: column;
+          p {
+            font-size: 14px;
+          }
+          h6 {
+            margin-top: 5px;
+            font-weight: 600;
+          }
+        }
+        &:hover {
+          box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+      }
+    }
+    .inbox-projects {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      // Inbox
+      .inbox {
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        background: #fff;
+        cursor: pointer;
+        .inbox-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+        }
+        .inbox-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-top: 1px solid $border-color;
+          padding: 10px 20px;
+          .inbox-img {
+            margin-right: 10px;
+            img {
+              width: 40px;
+              border-radius: 50%;
+            }
+          }
+          .inbox-info {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            span {
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+              small {
+                font-size: 10px;
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+
+      // Projects
+      .projects {
+        margin: 20px;
+        border-radius: 5px;
+        background: #fff;
+        .project-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          h5 {
+            font-weight: 600;
+            color: $primary-color;
+          }
+        }
+        .table {
+          padding: 10px;
+          overflow-x: auto;
+          table {
+            color: $primary-color;
+            width: 100%;
+            thead {
+              .t-header {
+                th {
+                  font-size: 14px;
+                  padding: 10px;
+                  font-weight: 600;
+                }
+              }
+            }
+            tbody {
+              padding: 10px;
+              .t-body {
+                th {
+                  font-size: 13px;
+                  padding: 5px 10px;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .sidebar {
   background: #fff;
   width: 25vw;
-  margin-top: -4px;
   height: 100vh;
   position: fixed;
   overflow: scroll;
+  z-index: 1111;
   .content {
-    padding: 30px 0;
+    padding: 20px 0 0 0;
     .content-top {
       display: flex;
       flex-direction: column;
@@ -305,133 +451,6 @@ $link-color: #6e768e;
               color: $text-hover;
               transition: all 0.3s ease;
             }
-          }
-        }
-      }
-    }
-  }
-}
-
-// Users
-.users {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  .user {
-    margin: 5px;
-    width: 260px;
-    background: #fff;
-    border-radius: 5px;
-    padding: 20px 10px;
-    display: flex;
-    align-items: center;
-    .user-img {
-      margin-right: 15px;
-      img {
-        width: 60px;
-        border-radius: 50%;
-      }
-    }
-    .user-info {
-      display: flex;
-      flex-direction: column;
-      p {
-        font-size: 14px;
-      }
-      h6 {
-        margin-top: 5px;
-        font-weight: 600;
-      }
-    }
-    &:hover {
-      box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-  }
-}
-
-// Inbox
-.inbox {
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  background: #fff;
-  cursor: pointer;
-  .inbox-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  .inbox-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid $border-color;
-    padding: 10px 20px;
-    .inbox-img {
-      margin-right: 10px;
-      img {
-        width: 40px;
-        border-radius: 50%;
-      }
-    }
-    .inbox-info {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      span {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        small {
-          font-size: 10px;
-          opacity: 0.8;
-        }
-      }
-    }
-  }
-}
-
-// Projects
-.projects {
-  margin: 20px;
-  border-radius: 5px;
-  background: #fff;
-  .project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    h5 {
-      font-weight: 600;
-      color: $primary-color;
-    }
-  }
-  .table {
-    padding: 10px;
-    overflow-x: auto;
-    table {
-      color: $primary-color;
-      width: 100%;
-      thead {
-        .t-header {
-          th {
-            font-size: 14px;
-            padding: 10px;
-            font-weight: 600;
-          }
-        }
-      }
-      tbody {
-        padding: 10px;
-        .t-body {
-          th {
-            font-size: 13px;
-            padding: 5px 10px;
-            font-weight: 400;
           }
         }
       }
@@ -531,29 +550,43 @@ $link-color: #6e768e;
       }
     }
   }
-  .sidebar {
-    display: none;
-  }
-  .users {
-    .user {
+  main {
+    .sidebar {
+      display: none;
+    }
+    .dashboard {
       width: 100%;
-      .user-img {
-        margin-left: 20px;
-        margin-right: 40px;
-        img {
-          width: 100px;
-          border-radius: 50%;
+      .users {
+        .user {
+          width: 100%;
+          padding: 10px;
+          .user-img {
+            margin-left: 10px;
+            margin-right: 40px;
+            img {
+              width: 80px;
+              border-radius: 50%;
+            }
+          }
+          .user-info {
+            h5 {
+              font-size: 20px;
+            }
+            p {
+              font-size: 16px;
+            }
+            h6 {
+              font-size: 12px;
+            }
+          }
         }
       }
-      .user-info {
-        h5 {
-          font-size: 20px;
-        }
-        p {
-          font-size: 16px;
-        }
-        h6 {
-          font-size: 12px;
+      .inbox-projects {
+        flex-direction: column;
+        align-items: center;
+        .inbox,
+        .projects {
+          width: 100%;
         }
       }
     }
