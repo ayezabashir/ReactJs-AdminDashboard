@@ -6,9 +6,7 @@ const Dashboard = () => {
     return (
         <>
             <div className="dashboard">
-                <div className="users">
-                    <Users />
-                </div>
+                <Users />
                 <div className="inbox-projects">
                     <Inbox />
                     <Projects />

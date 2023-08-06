@@ -19,7 +19,7 @@ $body-bg: #ebeff2;
         display: flex;
         .image {
           background: #fff;
-          width: 25vw;
+          width: 24vw;
           padding: 26px;
           text-align: center;
           img {
@@ -249,144 +249,23 @@ main {
   top: 72px;
 
   .dashboard {
-    width: 75vw;
+    width: 76vw;
     position: absolute;
     right: 0;
     padding: 20px;
-    // Users
-    .users {
-      display: flex;
-      flex-wrap: wrap;
-      .user {
-        margin: 5px;
-        width: 250px;
-        background: #fff;
-        border-radius: 5px;
-        padding: 20px 10px;
-        display: flex;
-        align-items: center;
-        .user-img {
-          margin-right: 15px;
-          img {
-            width: 60px;
-            border-radius: 50%;
-          }
-        }
-        .user-info {
-          display: flex;
-          flex-direction: column;
-          p {
-            font-size: 14px;
-          }
-          h6 {
-            margin-top: 5px;
-            font-weight: 600;
-          }
-        }
-        &:hover {
-          box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.2);
-          transition: all 0.3s ease;
-          cursor: pointer;
-        }
-      }
-    }
+
     .inbox-projects {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      // Inbox
-      .inbox {
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        width: 320px;
-        background: #fff;
-        cursor: pointer;
-        .inbox-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 10px;
-        }
-        .inbox-item {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          border-top: 1px solid $border-color;
-          padding: 10px 20px;
-          .inbox-img {
-            margin-right: 10px;
-            img {
-              width: 40px;
-              border-radius: 50%;
-            }
-          }
-          .inbox-info {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            span {
-              display: flex;
-              justify-content: space-between;
-              align-items: flex-start;
-              small {
-                font-size: 10px;
-                opacity: 0.8;
-              }
-            }
-          }
-        }
-      }
-
-      // Projects
-      .projects {
-        margin: 20px;
-        border-radius: 5px;
-        background: #fff;
-        .project-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 10px 20px;
-          h5 {
-            font-weight: 600;
-            color: $primary-color;
-          }
-        }
-        .table {
-          padding: 10px;
-          overflow-x: auto;
-          table {
-            color: $primary-color;
-            width: 100%;
-            thead {
-              .t-header {
-                th {
-                  font-size: 14px;
-                  padding: 10px;
-                  font-weight: 600;
-                }
-              }
-            }
-            tbody {
-              padding: 10px;
-              .t-body {
-                th {
-                  font-size: 13px;
-                  padding: 5px 10px;
-                  font-weight: 400;
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 }
+
+// Sidebar
 .sidebar {
   background: #fff;
-  width: 25vw;
+  width: 24vw;
   height: 100vh;
   position: fixed;
   overflow: scroll;
@@ -452,6 +331,148 @@ main {
               transition: all 0.3s ease;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+// Users
+.users {
+  display: flex;
+  flex-wrap: wrap;
+  .user {
+    margin: 5px;
+    width: 250px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    .user-img {
+      margin-right: 15px;
+      img {
+        width: 60px;
+        border-radius: 50%;
+      }
+    }
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      p {
+        font-size: 14px;
+      }
+      h6 {
+        margin-top: 5px;
+        font-weight: 600;
+      }
+    }
+    &:hover {
+      box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+  }
+}
+
+// Inbox
+.inbox {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  background: #fff;
+  cursor: pointer;
+  .inbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .inbox-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $border-color;
+    padding: 10px 20px;
+    .inbox-img {
+      margin-right: 10px;
+      img {
+        width: 40px;
+        border-radius: 50%;
+      }
+    }
+    .inbox-info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      span {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        small {
+          font-size: 10px;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+// Projects
+.projects {
+  margin: 20px;
+  border-radius: 5px;
+  background: #fff;
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    h5 {
+      font-weight: 600;
+      color: $primary-color;
+    }
+  }
+  .table {
+    padding: 10px;
+    overflow-x: auto;
+    table {
+      color: $primary-color;
+      width: 100%;
+      thead {
+        .t-header {
+          th {
+            font-size: 14px;
+            padding: 10px;
+            font-weight: 600;
+          }
+        }
+      }
+      tbody {
+        padding: 10px;
+        .t-body {
+          th {
+            font-size: 13px;
+            padding: 5px 10px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    .dashboard {
+      .inbox-projects {
+        flex-direction: column;
+        align-items: center;
+        .inbox,
+        .projects {
+          margin-top: 15px;
+          width: 100%;
         }
       }
     }
@@ -558,6 +579,7 @@ main {
       width: 100%;
       .users {
         .user {
+          margin: 5px 5px 0 0;
           width: 100%;
           padding: 10px;
           .user-img {
@@ -579,14 +601,6 @@ main {
               font-size: 12px;
             }
           }
-        }
-      }
-      .inbox-projects {
-        flex-direction: column;
-        align-items: center;
-        .inbox,
-        .projects {
-          width: 100%;
         }
       }
     }
