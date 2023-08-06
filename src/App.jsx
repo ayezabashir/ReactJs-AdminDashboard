@@ -1,8 +1,8 @@
 import './App.scss'
 import Header from './components/header/Header'
-import Sidebar from './components/sidebar/Sidebar'
-import Dashboard from './pages/Dashboard';
-
+// import Sidebar from './components/sidebar/Sidebar'
+// import Dashboard from './pages/Dashboard';
+import Stats from './components/charts/Stats';
 import { useState } from 'react';
 function App() {
   const [lightmode, setLightmMode] = useState(true);
@@ -12,10 +12,11 @@ function App() {
   return (
     <>
       <Header mode={switchModes} light={lightmode} />
-      <main>
+      {/* <main>
         <Sidebar />
         <Dashboard />
-      </main>
+      </main> */}
+      <Stats />
     </>
   )
 }

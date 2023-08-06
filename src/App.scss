@@ -380,7 +380,7 @@ main {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 40%;
   background: #fff;
   cursor: pointer;
   .inbox-header {
@@ -421,6 +421,7 @@ main {
 
 // Projects
 .projects {
+  width: 60%;
   margin: 20px;
   border-radius: 5px;
   background: #fff;
@@ -461,6 +462,10 @@ main {
       }
     }
   }
+}
+
+#chart {
+  max-width: 300px;
 }
 
 @media screen and (max-width: 992px) {
