@@ -341,9 +341,11 @@ main {
 .users {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
   .user {
-    margin: 5px;
-    width: 250px;
+    margin: 5px 0;
+    width: 32%;
     background: #fff;
     border-radius: 5px;
     padding: 20px 10px;
@@ -464,10 +466,36 @@ main {
   }
 }
 
+// Charts
+.charts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  .chart-card {
+    background: #fff;
+    height: auto;
+    width: 32%;
+    border-radius: 5px;
+    .chart-header {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .chart {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
 #stats-chart,
 #sales-chart,
 #revenue-chart {
-  max-width: 300px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 992px) {
@@ -480,6 +508,27 @@ main {
         .projects {
           margin-top: 15px;
           width: 100%;
+        }
+      }
+    }
+  }
+  .users {
+    justify-content: space-between;
+    .user {
+      margin: 5px 0;
+      width: 48%;
+    }
+  }
+  .charts {
+    .chart-card {
+      height: 320px;
+      width: 100%;
+      .chart {
+        #stats-chart,
+        #sales-chart,
+        #revenue-chart {
+          width: 100%;
+          height: fit-content;
         }
       }
     }
@@ -585,8 +634,9 @@ main {
     .dashboard {
       width: 100%;
       .users {
+        margin-top: 5px;
         .user {
-          margin: 5px 5px 0 0;
+          margin: 5px 0 5px 0;
           width: 100%;
           padding: 10px;
           .user-img {

@@ -20,10 +20,8 @@ const Sales = () => {
             plotOptions: {
                 pie: {
                     expandOnClick: true,
-                    offsetX: 0,
-                    offsetY: 0,
                     customScale: 1,
-                    size: 200,
+                    size: 100,
                     donut: {
                         labels: {
                             show: true,

@@ -6,7 +6,7 @@ const Chart = () => {
     return (
         <>
             <div className="charts">
-                <div className="chart-card">
+                <div className="chart-card sales">
                     <div className="chart-header">
                         <h5>Daily Sales</h5>
                         <MoreVertIcon className='icon' />
@@ -16,7 +16,7 @@ const Chart = () => {
                     </div>
                 </div>
 
-                <div className="chart-card">
+                <div className="chart-card stats">
                     <div className="chart-header">
                         <h5>Statistics</h5>
                         <MoreVertIcon className='icon' />
@@ -26,7 +26,7 @@ const Chart = () => {
                     </div>
                 </div>
 
-                <div className="chart-card">
+                <div className="chart-card revenue">
                     <div className="chart-header">
                         <h5>Total Revenue</h5>
                         <MoreVertIcon className='icon' />
