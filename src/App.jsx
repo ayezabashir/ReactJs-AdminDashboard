@@ -1,9 +1,9 @@
 import './App.scss'
-import Header from './components/header/Header'
+// import Header from './components/header/Header'
 // import Sidebar from './components/sidebar/Sidebar'
 // import Dashboard from './pages/Dashboard';
-import Sales from './components/charts/Sales';
-import { useState } from 'react';
+import Revenue from './components/charts/Revenue';
+// import { useState } from 'react';
 function App() {
   // const [lightmode, setLightmMode] = useState(true);
   // const switchModes = () => {
@@ -16,7 +16,7 @@ function App() {
         <Sidebar />
         <Dashboard />
       </main> */}
-      <Sales />
+      <Revenue />
     </>
   )
 }

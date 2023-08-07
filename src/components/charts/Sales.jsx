@@ -16,6 +16,7 @@ const Sales = () => {
             dataLabels: {
                 enables: false,
             },
+            colors: ['#3a5a5f', '#f6adb6', '#ff9800'],
             plotOptions: {
                 pie: {
                     expandOnClick: true,

@@ -12,7 +12,8 @@ const Stats = () => {
             }],
             xaxis: {
                 categories: [2010, 2011, 2012, 2013, 2014, 2015]
-            }
+            },
+            colors: ['#f6adb6'],
         };
         const chart = new ApexCharts(document.querySelector("#stats-chart"), options);
         chart.render();
