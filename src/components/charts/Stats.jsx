@@ -14,7 +14,7 @@ const Stats = () => {
                 categories: [2010, 2011, 2012, 2013, 2014, 2015]
             }
         };
-        const chart = new ApexCharts(document.querySelector("#chart"), options);
+        const chart = new ApexCharts(document.querySelector("#stats-chart"), options);
         chart.render();
 
         return () => {
@@ -23,7 +23,7 @@ const Stats = () => {
     }, [])
 
     return (
-        <div id='chart'></div>
+        <div id='stats-chart'></div>
     )
 }
 

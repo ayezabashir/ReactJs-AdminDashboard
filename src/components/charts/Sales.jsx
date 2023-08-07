@@ -11,8 +11,12 @@ const Sales = () => {
             chart: {
                 type: 'donut'
             },
+            legend: {
+                show: true,
+                position: 'bottom',
+            },
             dataLabels: {
-                enables: true,
+                enables: false,
             },
             plotOptions: {
                 pie: {
@@ -39,12 +43,12 @@ const Sales = () => {
                                 offsetY: -3
                             }
                         },
-                        size: '65%'
+                        size: '55%'
                     }
                 }
             }
         };
-        const chart = new ApexCharts(document.querySelector("#chart"), options);
+        const chart = new ApexCharts(document.querySelector("#sales-chart"), options);
         chart.render();
 
         return () => {
@@ -53,7 +57,7 @@ const Sales = () => {
     }, [])
 
     return (
-        <div id='chart'></div>
+        <div id='sales-chart'></div>
     )
 }
 
