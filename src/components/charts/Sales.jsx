@@ -5,9 +5,7 @@ const Sales = () => {
     useEffect(() => {
         const options = {
             series: [30, 20, 12],
-            chartOptions: {
-                labels: ['In Store Sales', 'Mail Order Sales', 'Download Sales']
-            },
+            labels: ['Store Sales', 'Mail Order Sales', 'Download Sales'],
             chart: {
                 type: 'donut'
             },
@@ -30,10 +28,10 @@ const Sales = () => {
                             show: true,
                             name: {
                                 show: true,
-                                fontSize: '16px',
+                                fontSize: '12px',
                                 fontFamily: 'Helvetica, san-serif',
                                 color: '#999',
-                                offsetY: -10
+                                offsetY: -6
                             },
                             value: {
                                 show: true,
@@ -43,7 +41,7 @@ const Sales = () => {
                                 offsetY: -3
                             }
                         },
-                        size: '55%'
+                        size: '65%'
                     }
                 }
             }
