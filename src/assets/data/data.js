@@ -154,6 +154,15 @@ export const projects = [
 export const todayReports = [
     {
         id: 1,
+        name: 'Sales Analytics',
+        today: 8341,
+        info: 'Sales Today',
+        type: 'range',
+        percent: '32%',
+        bg: '#f12c9a'
+    },
+    {
+        id: 2,
         name: 'Total Revenue',
         today: 256,
         info: 'Revenue Today',
@@ -161,20 +170,13 @@ export const todayReports = [
         percent: 58
     },
     {
-        id: 2,
-        name: 'Sales Analytics',
-        today: 8341,
-        info: 'Sales Today',
-        type: 'range',
-        percent: '32%'
-    },
-    {
         id: 3,
         name: 'Statistics',
         today: 5621,
         info: 'Stats Today',
-        type: 'radialBar',
-        percent: 80
+        type: 'range',
+        percent: '58%',
+        bg: '#697efe'
     },
     {
         id: 4,
@@ -182,6 +184,7 @@ export const todayReports = [
         today: 158,
         info: 'Daily Sales',
         type: 'range',
-        percent: '32%'
+        percent: '32%',
+        bg: '#e4a305'
     }
 ]

@@ -503,6 +503,57 @@ main {
   margin: 0 auto;
 }
 
+// Today Reports
+.today {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  .today-reports {
+    margin: 5px 0;
+    width: 24%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    .today-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    .today-info {
+      display: flex;
+      align-items: center;
+      .today-chart {
+        width: 50%;
+        margin-right: 12px;
+        .percent {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding-left: 10px;
+          border-radius: 15px;
+          color: white;
+        }
+        .icon {
+          padding: 2px;
+          color: white;
+        }
+      }
+      .today-text {
+        word-wrap: break-word;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &:hover {
+      box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+  }
+}
+
 @media screen and (max-width: 992px) {
   main {
     .dashboard {
