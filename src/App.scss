@@ -4,6 +4,21 @@ $border-color: #dee2e6;
 $link-color: #6e768e;
 $body-bg: #ebeff2;
 
+.bg-dark {
+  background: #4b4b4c !important;
+}
+.color-dark {
+  color: #f7f7f7 !important;
+}
+.color-light {
+  color: $primary-color;
+}
+.sidebar-dark,
+.card-dark {
+  background: #6e7074 !important;
+  color: #f7f7f7;
+}
+
 // header
 .header {
   width: 100vw;
@@ -77,6 +92,7 @@ $body-bg: #ebeff2;
           .notif-header {
             padding: 5px 10px;
             display: flex;
+            align-items: center;
             justify-content: space-between;
             margin: 10px 0;
             position: fixed;
@@ -240,19 +256,7 @@ $body-bg: #ebeff2;
     }
   }
 }
-.bg-dark {
-  background: #6e7074 !important;
-}
-.color-dark {
-  color: #f7f7f7 !important;
-}
-.color-light {
-  color: $primary-color;
-}
-.sidebar-dark {
-  background: #4b4b4c !important;
-  color: #f7f7f7;
-}
+
 // Main
 main {
   position: absolute;

@@ -17,7 +17,7 @@ function App() {
       <Header mode={switchModes} light={lightmode} />
       <main>
         <Sidebar light={lightmode} />
-        <Dashboard />
+        <Dashboard light={lightmode} />
       </main>
     </>
   )

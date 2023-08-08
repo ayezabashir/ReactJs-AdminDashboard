@@ -1,13 +1,13 @@
 import { notifPerson } from '../../assets/data/data'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-
-const Inbox = () => {
+// eslint-disable-next-line react/prop-types
+const Inbox = ({ light }) => {
     return (
         <>
-            <div className="inbox">
+            <div className={`inbox card-${light}`}>
                 <div className="inbox-header">
-                    <h5>Inbox</h5>
-                    <MoreVertIcon className='icon' />
+                    <h5 className={`color-${light}`}>Inbox</h5>
+                    <MoreVertIcon className={`icon color-${light}`} />
                 </div>
                 {notifPerson.map(item => (
                     <div className="inbox-item" key={item.id}>
@@ -16,7 +16,7 @@ const Inbox = () => {
                         </div>
                         <div className="inbox-info">
                             <span>
-                                <h5>{item.fullName}</h5>
+                                <h5 className={`color-${light}`}>{item.fullName}</h5>
                                 <small>{item.textTime}</small>
                             </span>
                             <p>{item.message.substring(0, 20)}...</p>

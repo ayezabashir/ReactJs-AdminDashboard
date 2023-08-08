@@ -40,7 +40,7 @@ const Header = ({ mode, light }) => {
             <div className="container">
                 <div className="left">
                     <div className="admin">
-                        <div className={`image bg-${light}`}>
+                        <div className={`image sidebar-${light}`}>
                             <img src={adminlogo} alt="" />
                         </div>
                         <h4 className={`color-${light}`}>Dashboard</h4>
@@ -50,7 +50,7 @@ const Header = ({ mode, light }) => {
                             <img src={logo} alt="logo" />
                         </div>
                         <MenuIcon className={`icon color-${light}`} onClick={handleSidebarClick} />
-                        {isSidebarShown && <Sidebar />}
+                        {isSidebarShown && <Sidebar light={light} />}
                     </div>
                 </div>
                 <div className="right">
@@ -61,13 +61,13 @@ const Header = ({ mode, light }) => {
                     <div className='notif-content'>
                         <NotificationsNoneIcon className={`icon notif color-${light}`} onClick={handleNotifClick} />
                         <span className='span-notif'>{notifPerson.length}</span>
-                        {isNotifShown && <Notification />}
+                        {isNotifShown && <Notification light={light} />}
                     </div>
                     <div className="admin" onClick={handleAccount}>
                         <img src={admin} alt="adminimg" />
                         <h4 className={`color-${light}`}>Ayeza</h4>
                         <KeyboardArrowDownIcon className={`icon color-${light}`} />
-                        {accountDrop && <Account />}
+                        {accountDrop && <Account light={light} />}
                     </div>
                     <div onClick={mode}>
                         {light === 'light' ? <DarkModeIcon className={`icon color-${light}`} /> : <LightModeIcon className={`icon color-${light}`} />}

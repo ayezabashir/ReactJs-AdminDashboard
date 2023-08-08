@@ -1,15 +1,16 @@
+/* eslint-disable react/prop-types */
 import { projects } from '../../assets/data/data'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-const Projects = () => {
+const Projects = ({ light }) => {
     return (
         <>
-            <div className="projects">
+            <div className={`projects card-${light}`}>
                 <div className="project-header">
-                    <h5>Latest Projects</h5>
-                    <MoreVertIcon className='icon' />
+                    <h5 className={`color-${light}`}>Latest Projects</h5>
+                    <MoreVertIcon className={`icon color-${light}`} />
                 </div>
                 <div className="table">
-                    <table>
+                    <table className={`color-${light}`}>
                         <thead>
                             <tr className='t-header'>
                                 <th>#</th>
