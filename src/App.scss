@@ -477,6 +477,7 @@ main {
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
+  margin-top: 10px;
   .chart-card {
     background: #fff;
     height: auto;
@@ -508,7 +509,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 10px;
   .today-reports {
     margin: 5px 0;
     width: 24%;
