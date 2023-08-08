@@ -259,6 +259,7 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      gap: 10px;
     }
   }
 }
@@ -346,7 +347,7 @@ main {
   margin-top: 10px;
   .user {
     margin: 5px 0;
-    width: 32%;
+    width: 24%;
     background: #fff;
     border-radius: 5px;
     padding: 20px 10px;
@@ -355,7 +356,7 @@ main {
     .user-img {
       margin-right: 15px;
       img {
-        width: 60px;
+        width: 50px;
         border-radius: 50%;
       }
     }
@@ -364,6 +365,7 @@ main {
       flex-direction: column;
       p {
         font-size: 14px;
+        overflow-wrap: anywhere;
       }
       h6 {
         margin-top: 5px;
@@ -382,6 +384,7 @@ main {
 .inbox {
   border-radius: 5px;
   display: flex;
+  margin-top: 10px;
   flex-direction: column;
   width: 40%;
   background: #fff;
@@ -425,7 +428,7 @@ main {
 // Projects
 .projects {
   width: 60%;
-  margin: 20px;
+  margin-top: 10px;
   border-radius: 5px;
   background: #fff;
   .project-header {
@@ -636,7 +639,6 @@ main {
     .dashboard {
       width: 100%;
       .users {
-        margin-top: 5px;
         .user {
           margin: 5px 0 5px 0;
           width: 100%;
