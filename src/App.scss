@@ -524,6 +524,8 @@ main {
     .today-info {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      padding: 5px;
       .today-chart {
         width: 50%;
         margin-right: 12px;
@@ -569,10 +571,8 @@ main {
     }
   }
   .users {
-    justify-content: space-between;
     .user {
-      margin: 5px 0;
-      width: 48%;
+      width: 49%;
     }
   }
   .charts {
@@ -587,6 +587,11 @@ main {
           height: fit-content;
         }
       }
+    }
+  }
+  .today {
+    .today-reports {
+      width: 49%;
     }
   }
 }
@@ -689,30 +694,38 @@ main {
     }
     .dashboard {
       width: 100%;
-      .users {
-        .user {
-          margin: 5px 0 5px 0;
-          width: 100%;
-          padding: 10px;
-          .user-img {
-            margin-left: 10px;
-            margin-right: 40px;
-            img {
-              width: 80px;
-              border-radius: 50%;
-            }
-          }
-          .user-info {
-            h5 {
-              font-size: 20px;
-            }
-            p {
-              font-size: 16px;
-            }
-            h6 {
-              font-size: 12px;
-            }
-          }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .today {
+    .today-reports {
+      width: 100%;
+    }
+  }
+  .users {
+    .user {
+      margin: 5px 0 5px 0;
+      width: 100%;
+      padding: 10px;
+      .user-img {
+        margin-left: 10px;
+        margin-right: 40px;
+        img {
+          width: 80px;
+          border-radius: 50%;
+        }
+      }
+      .user-info {
+        h5 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+        }
+        h6 {
+          font-size: 12px;
         }
       }
     }
