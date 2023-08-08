@@ -486,6 +486,7 @@ main {
       align-items: center;
     }
     .chart {
+      padding: 10px;
       width: 100%;
       height: auto;
     }
@@ -522,7 +523,7 @@ main {
   }
   .charts {
     .chart-card {
-      height: 320px;
+      height: auto;
       width: 100%;
       .chart {
         #stats-chart,
