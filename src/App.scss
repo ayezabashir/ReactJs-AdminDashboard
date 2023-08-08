@@ -1,5 +1,4 @@
 $primary-color: #757e85;
-$bg-input: #e2e6ea;
 $text-hover: #71b6f9;
 $border-color: #dee2e6;
 $link-color: #6e768e;
@@ -8,6 +7,7 @@ $body-bg: #ebeff2;
 // header
 .header {
   width: 100vw;
+  height: 66px;
   position: fixed;
   z-index: 111;
   background: $body-bg;
@@ -20,6 +20,7 @@ $body-bg: #ebeff2;
         .image {
           background: #fff;
           width: 24vw;
+          height: 66px;
           padding: 26px;
           text-align: center;
           img {
@@ -139,8 +140,7 @@ $body-bg: #ebeff2;
           height: 38px;
           padding-left: 20px;
           padding-right: 0;
-          background: $bg-input;
-          border: none;
+          border: 2px solid white;
           border-radius: 30px;
           outline: none;
         }
@@ -240,14 +240,26 @@ $body-bg: #ebeff2;
     }
   }
 }
-
+.bg-dark {
+  background: #6e7074 !important;
+}
+.color-dark {
+  color: #f7f7f7 !important;
+}
+.color-light {
+  color: $primary-color;
+}
+.sidebar-dark {
+  background: #4b4b4c !important;
+  color: #f7f7f7;
+}
 // Main
 main {
   position: absolute;
   display: flex;
   right: 0;
   left: 0;
-  top: 72px;
+  top: 66px;
 
   .dashboard {
     width: 76vw;

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import admin from '../../assets/images/adminimg.png'
 import SettingsIcon from '@mui/icons-material/Settings';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
@@ -21,110 +22,110 @@ import AddchartIcon from '@mui/icons-material/Addchart';
 import MapIcon from '@mui/icons-material/Map';
 import ShareIcon from '@mui/icons-material/Share';
 
-const Sidebar = () => {
+const Sidebar = ({ light }) => {
     return (
         <>
-            <div className="sidebar">
+            <div className={`sidebar sidebar-${light}`}>
                 <div className="content">
                     <div className="content-top">
                         <div className="image">
                             <img src={admin} alt="" className='thumbnail' />
                         </div>
-                        <h4>Ayeza Bashir</h4>
+                        <h4 className={`color-${light}`}>Ayeza Bashir</h4>
                         <small>Admin Head</small>
                         <div className="icons">
-                            <SettingsIcon className='icon' />
-                            <PowerSettingsNewIcon className='icon' />
+                            <SettingsIcon className={`icon color-${light}`} />
+                            <PowerSettingsNewIcon className={`icon color-${light}`} />
                         </div>
                     </div>
                     <div className="content-bottom">
                         <div className="title">
-                            <h5>Navigation</h5>
+                            <h5 className={`color-${light}`}>Navigation</h5>
                             <div className="item">
-                                <DashboardIcon className="icon" />
-                                <p>Dashboard</p>
+                                <DashboardIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Dashboard</p>
                             </div>
                         </div>
                         <div className="title">
-                            <h5>Apps</h5>
+                            <h5 className={`color-${light}`}>Apps</h5>
                             <div className="item">
-                                <CalendarTodayIcon className="icon" />
-                                <p>Calender</p>
+                                <CalendarTodayIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Calender</p>
                             </div>
                             <div className="item">
-                                <ChatBubbleOutlineIcon className="icon" />
-                                <p>Chat</p>
+                                <ChatBubbleOutlineIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Chat</p>
                             </div>
                             <div className="item">
-                                <MailOutlineIcon className="icon" />
-                                <p>Email</p>
+                                <MailOutlineIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Email</p>
                             </div>
                             <div className="item">
-                                <ContentPasteIcon className="icon" />
-                                <p>Tasks</p>
+                                <ContentPasteIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Tasks</p>
                             </div>
                             <div className="item">
-                                <BusinessCenterIcon className="icon" />
-                                <p>Projects</p>
+                                <BusinessCenterIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Projects</p>
                             </div>
                             <div className="item">
-                                <ImportContactsIcon className="icon" />
-                                <p>Contacts</p>
+                                <ImportContactsIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Contacts</p>
                             </div>
                         </div>
                         <div className="title">
-                            <h5>Custom</h5>
+                            <h5 className={`color-${light}`}>Custom</h5>
                             <div className="item">
-                                <PersonAddAlt1Icon className="icon" />
-                                <p>Auth Pages</p>
+                                <PersonAddAlt1Icon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Auth Pages</p>
                             </div>
                             <div className="item">
-                                <NoteAddIcon className="icon" />
-                                <p>Extra Pages</p>
+                                <NoteAddIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Extra Pages</p>
                             </div>
                             <div className="item">
-                                <ViewArrayIcon className="icon" />
-                                <p>Laoyouts</p>
+                                <ViewArrayIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Laoyouts</p>
                             </div>
 
                         </div>
                         <div className="title">
-                            <h5>Componets</h5>
+                            <h5 className={`color-${light}`}>Componets</h5>
                             <div className="item">
-                                <WorkOutlineIcon className="icon" />
-                                <p>Base UI</p>
+                                <WorkOutlineIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Base UI</p>
                             </div>
                             <div className="item">
-                                <CardGiftcardIcon className="icon" />
-                                <p>Widgets</p>
+                                <CardGiftcardIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Widgets</p>
                             </div>
                             <div className="item">
-                                <AddBusinessIcon className="icon" />
-                                <p>Extended UI</p>
+                                <AddBusinessIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Extended UI</p>
                             </div>
                             <div className="item">
-                                <HealthAndSafetyIcon className="icon" />
-                                <p>Icons</p>
+                                <HealthAndSafetyIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Icons</p>
                             </div>
                             <div className="item">
-                                <ForumIcon className="icon" />
-                                <p>Forms</p>
+                                <ForumIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Forms</p>
                             </div>
                             <div className="item">
-                                <GridOnIcon className="icon" />
-                                <p>Tables</p>
+                                <GridOnIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Tables</p>
                             </div>
                             <div className="item">
-                                <AddchartIcon className="icon" />
-                                <p>Charts</p>
+                                <AddchartIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Charts</p>
                             </div>
                             <div className="item">
-                                <MapIcon className="icon" />
-                                <p>Maps</p>
+                                <MapIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Maps</p>
                             </div>
                             <div className="item">
-                                <ShareIcon className="icon" />
-                                <p>Multi Level</p>
+                                <ShareIcon className={`icon color-${light}`} />
+                                <p className={`color-${light}`}>Multi Level</p>
                             </div>
                         </div>
                     </div>
